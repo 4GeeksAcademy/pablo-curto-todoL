@@ -9,11 +9,10 @@ const Fila = () =>{
 		<h1>Mis Tareas</h1>
 		<div className="container">
 			<ul>
-				<li>
-                    <input type="text" placeholder="¿Qué tengo pendiente?" 
-                    onChange={(e) => setTarea(e.target.value)} value={tarea} 
-                    onKeyDown={(e)=> {if (e.key === "Enter") {setTodos(todos.concat([tarea])); setTarea("");}}}/>
-                </li>
+                <input type="text" placeholder="¿Qué tengo pendiente?" 
+                onChange={(e) => setTarea(e.target.value)} value={tarea} 
+                onKeyDown={(e)=> {if (e.key === "Enter") {setTodos(todos.concat([tarea])); setTarea("");}}}/>
+
 				{todos.map((t, index)=>(
                     <li>
                         {t} <i className="borrar" onClick={()=> setTodos(todos.filter((t,currentIndex)=> index !=currentIndex))}><strong>X</strong></i>
@@ -21,6 +20,8 @@ const Fila = () =>{
                 ))}
 			</ul>
 			<div className="counter">{todos.length} tareas</div>
+            <div className="pag1"></div>
+            <div className="pag2"></div>
 		</div>
 		</>
     )

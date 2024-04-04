@@ -1,10 +1,13 @@
 body{
     margin-top: 50px;
     justify-content: center;
+    background: #f8f7f7;
 }
 
 h1{
     text-align: center;
+    font-family: 'Helvetica';
+    color: #efe3e4;
 }
 ul{
     padding: 0;
@@ -14,11 +17,31 @@ ul li{
     border: 1px solid grey;
     list-style: none;
     padding: 5px;
+    background: #f9f9f9;
+    cursor: pointer;
+    color: #979797;
 }
 input{
-    border: none;
     width: 100%;
+    border: 1px solid grey;
+    background: #f9f9f9;
 }
-.borrar{
-    justify-content: end;
+.counter{
+    border: 1px solid grey;
+    background: #f9f9f9;
+    color: #dadada;
+}
+.pag1{
+    padding: 1.5px;
+    border: 1px solid grey;
+    background: #f9f9f9;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.pag2{
+    padding: 1px;
+    border: 1px solid grey;
+    background: #f9f9f9;
+    margin-left: 7px;
+    margin-right: 7px;
 }
