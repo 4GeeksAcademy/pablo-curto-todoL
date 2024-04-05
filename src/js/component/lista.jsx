@@ -11,10 +11,10 @@ const Fila = () =>{
 			<ul>
                 <input type="text" placeholder="¿Qué tengo pendiente?" 
                 onChange={(e) => setTarea(e.target.value)} value={tarea} 
-                onKeyDown={(e)=> {if (e.key === "Enter") {setTodos(todos.concat([tarea])); setTarea("");}}}/>
+                onKeyDown={(e)=> {if (e.key === "Enter") if((tarea.trim().length >= 3)){setTodos([...todos, tarea]); setTarea("");}else return alert("error")}}/>
 
 				{todos.map((t, index)=>(
-                    <li>
+                    <li key={index}>
                         {t} <i className="borrar" onClick={()=> setTodos(todos.filter((t,currentIndex)=> index !=currentIndex))}><strong>X</strong></i>
                     </li>
                 ))}
